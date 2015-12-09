@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#! /usr/local/bin/python
 
 import sys
 import re
@@ -30,7 +30,7 @@ class DBCredentials:
         tuples = re.findall( r'(\w+)=([^\s]+)', text )
 
         #print tuples
-        #[('host', 'vprod'), ('username', 'dsauve'), ('password', 'xxx')]
+        #[('host', 'localhost'), ('username', 'foo'), ('password', 'bar')]
 
         for tuple in tuples:
             self.creds[ tuple[0] ] = tuple[1]
@@ -45,13 +45,13 @@ class DBCredentials:
     def set_host( self, host ):
         self.creds['host'] = host
 
-    # listener port - return if specified, otherwise default to 1521
+    # listener port - return if specified, otherwise default to 3306
     #
     def get_port( self ):
         if self.creds['port']:
             return self.creds['port']
         else:
-            return '1521'
+            return '3306'
 
     def set_port( self, port ):
         self.creds['port'] = port
