@@ -27,11 +27,10 @@ Use file ownership and permissions to provide basic security.
 
 Example:
 
-```
-$ chmod 700 ./db_credentials/test/
-$ chmod 400 ./db_credentials/test/test.creds
-$ ls -la ./db_credentials/test/
-drwx------  test
-$ ls -la ./db_credentials/test/test.creds
--r--------  test.creds
-```
+    $ chmod 700 ./db_credentials/test/
+    $ chmod 400 ./db_credentials/test/test.creds
+    $ ls -la ./db_credentials/test/
+    drwx------  test
+    $ ls -la ./db_credentials/test/test.creds
+    -r--------  test.creds
+
