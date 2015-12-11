@@ -19,7 +19,7 @@ class DBCredentials:
 
     # Load credentials from a file: no input validation.
     #
-    def loadFile( self, filename ):
+    def load_file( self, filename ):
 
         f = open( filename, 'r' )
         text = f.read()
