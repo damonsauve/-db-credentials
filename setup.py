@@ -22,7 +22,7 @@ setup(
     description="Reads databases credential files.",
     long_description=readme(),
     classifiers=['Programming Language :: Python :: 2.7'],
-    url='',
+    url='https://github.com/damonsauve/db-credentials',
     author='Damon Sauve',
     author_email='damonsauve@gmail.com',
     license='MIT',

@@ -1,6 +1,8 @@
-# DBCredentials
+DBCredentials
+=============
 
-## Usage
+Usage
+-----
 
 Example:
 
@@ -21,16 +23,28 @@ To access creds:
     print 'get_username: ', creds.get_username()
     print 'get_password: ', creds.get_password()
 
-## Security Settings for Cred Files
+Security Settings for Cred Files
+--------------------------------
 
 Use file ownership and permissions to provide basic security.
 
 Example:
 
-    $ chmod 700 ./db_credentials/test/
-    $ chmod 400 ./db_credentials/test/test.creds
-    $ ls -la ./db_credentials/test/
-    drwx------  test
-    $ ls -la ./db_credentials/test/test.creds
-    -r--------  test.creds
+    $ sudo mkdir /etc/test
+    $ sudo chown -R user:group /etc/test
 
+    $ cat <<EOF > /etc/test/test.creds
+    host=test_database
+    username=test_user
+    password=test_password
+    EOF
+
+    $ chmod 700 /etc/test
+    $ chmod 400 /etc/test/*
+
+Verify permissions:
+
+    $ ls -la /etc/test
+    drwx------  test
+    $ ls -la /etc/test/test.creds
+    -r--------  test.creds
