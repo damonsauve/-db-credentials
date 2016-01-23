@@ -1,8 +1,11 @@
+"""."""
+
 from setuptools import setup
 
 def readme():
-    with open('README.rst') as f:
-        return f.read()
+    """."""
+    with open('README.rst') as filehandle:
+        return filehandle.read()
 
 # Packaging:
 # http://www.scotttorborg.com/python-packaging/
